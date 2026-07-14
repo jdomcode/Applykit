@@ -266,3 +266,19 @@ This version adds final basic trust pages for the beta launch:
 - Sitemap and robots updated for the new public pages
 
 Contact email used in public pages: `contact@applykit.online`. Configure email forwarding or a mailbox before public promotion.
+
+
+## Day 5 final closeout
+
+ApplyKit is closed as a beta-stable release. The Day 5 update includes final documentation and a generation-quality fix for the Professional Bio and Recruiter Message templates.
+
+New documentation:
+
+- `docs/project-final-state.md`
+- `docs/day-5-final-closeout.md`
+
+New Supabase migration:
+
+- `supabase/migrations/20260714000100_polish_generation_templates.sql`
+
+Run that migration in Supabase SQL Editor after deploying this version so production templates match the corrected generator behavior.

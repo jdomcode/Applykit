@@ -311,7 +311,7 @@ export const tools: ToolDefinition[] = [
     fields: [
       fullNameField,
       { name: "target_role", type: "text", required: true, translations: { en: { label: "Target role", placeholder: "Example: QA Analyst" }, es: { label: "Rol objetivo", placeholder: "Ejemplo: Analista QA" } } },
-      { name: "years_experience", type: "text", translations: { en: { label: "Years of experience", placeholder: "Example: 2 years" }, es: { label: "Años de experiencia", placeholder: "Ejemplo: 2 años" } } },
+      { name: "years_experience", type: "text", required: true, translations: { en: { label: "Years of experience", placeholder: "Example: 2 years" }, es: { label: "Años de experiencia", placeholder: "Ejemplo: 2 años" } } },
       mainSkillsField,
       { name: "platform", type: "select", required: true, translations: { en: { label: "Platform" }, es: { label: "Plataforma" } }, options: { en: ["LinkedIn", "Email", "Indeed", "Other"], es: ["LinkedIn", "Correo", "Indeed", "Otra"] } },
       commonToneField,
@@ -456,9 +456,8 @@ export const tools: ToolDefinition[] = [
     fields: [
       fullNameField,
       { name: "current_role", type: "text", required: true, translations: { en: { label: "Current role", placeholder: "Example: Systems Analyst" }, es: { label: "Rol actual", placeholder: "Ejemplo: Analista de Sistemas" } } },
-      { name: "years_experience", type: "text", translations: { en: { label: "Years of experience", placeholder: "Example: 3 years" }, es: { label: "Años de experiencia", placeholder: "Ejemplo: 3 años" } } },
+      { name: "years_experience", type: "text", required: true, translations: { en: { label: "Years of experience", placeholder: "Example: 3 years" }, es: { label: "Años de experiencia", placeholder: "Ejemplo: 3 años" } } },
       mainSkillsField,
-      { name: "use_case", type: "select", required: true, translations: { en: { label: "Use case" }, es: { label: "Uso" } }, options: { en: ["Resume", "Portfolio", "Website", "Company profile"], es: ["CV", "Portafolio", "Sitio web", "Perfil de empresa"] } },
       commonToneField,
       commonLanguageField
     ]

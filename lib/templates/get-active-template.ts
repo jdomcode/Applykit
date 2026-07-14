@@ -41,8 +41,8 @@ const localTemplates: Record<string, Record<Locale, string>> = {
     es: "Estimado/a {{interviewer_name}}:\n\nGracias nuevamente por tomarse el tiempo de conversar conmigo sobre la posición de {{job_title}} en {{company_name}} el día {{interview_date}}. Aprecié la oportunidad de conocer más sobre el puesto y el equipo.\n\nSigo interesado/a en la oportunidad y quedo disponible para proporcionar cualquier información adicional si es necesario.\n\nAtentamente,\n{{full_name}}"
   },
   "recruiter-message-generator": {
-    en: "Hello,\n\nMy name is {{full_name}}. I am interested in opportunities related to {{target_role}}. I have {{years_experience}} of experience and skills in {{main_skills}}.\n\nI would appreciate the opportunity to connect and learn whether there are relevant openings where my profile could be a fit.\n\nBest regards,\n{{full_name}}",
-    es: "Hola,\n\nMi nombre es {{full_name}}. Estoy interesado/a en oportunidades relacionadas con {{target_role}}. Cuento con {{years_experience}} de experiencia y habilidades en {{main_skills}}.\n\nMe gustaría conectar y conocer si existen vacantes donde mi perfil pueda encajar.\n\nSaludos,\n{{full_name}}"
+    en: "Hello,\n\nMy name is {{full_name}}. I am reaching out through {{platform}} regarding opportunities related to {{target_role}}. I have {{years_experience}} of experience and skills in {{main_skills}}.\n\nI would appreciate the opportunity to connect and learn whether there are relevant openings where my profile could be a strong fit.\n\nBest regards,\n{{full_name}}",
+    es: "Hola,\n\nMi nombre es {{full_name}}. Le escribo por {{platform}} sobre oportunidades relacionadas con {{target_role}}. Cuento con {{years_experience}} de experiencia y habilidades en {{main_skills}}.\n\nMe gustaría conectar y conocer si existen vacantes donde mi perfil pueda encajar de forma sólida.\n\nSaludos,\n{{full_name}}"
   },
   "resignation-letter-generator": {
     en: "Dear Manager,\n\nPlease accept this letter as formal notice of my resignation from my position as {{job_title}} at {{company_name}}. My last working day will be {{last_working_day}}.\n\n{{reason_optional}}\n\nThank you for the opportunity to be part of the team. I appreciate the experience and support received during my time with the company.\n\nSincerely,\n{{full_name}}",
@@ -57,8 +57,8 @@ const localTemplates: Record<string, Record<Locale, string>> = {
     es: "Soy {{full_name}}, profesional enfocado/a en {{current_role}} con experiencia en {{main_skills}}. Mi trabajo se centra en aportar resultados prácticos, mejorar procesos y contribuir a equipos con un enfoque claro y profesional."
   },
   "professional-bio-generator": {
-    en: "{{full_name}} is a {{current_role}} with experience in {{main_skills}}. This background supports a practical, organized, and results-oriented approach to professional work.",
-    es: "{{full_name}} es un/a {{current_role}} con experiencia en {{main_skills}}. Esta trayectoria respalda una forma de trabajo práctica, organizada y orientada a resultados."
+    en: "{{full_name}} is a {{current_role}} with {{years_experience}} of experience and skills in {{main_skills}}. This profile reflects a practical, organized, and quality-focused approach to professional work, with an emphasis on clear communication, process improvement, and reliable results.",
+    es: "{{full_name}} es {{current_role}} con {{years_experience}} de experiencia y habilidades en {{main_skills}}. Su perfil refleja una forma de trabajo práctica, organizada y orientada a la calidad, con enfoque en comunicación clara, mejora de procesos y resultados confiables."
   }
 };
 

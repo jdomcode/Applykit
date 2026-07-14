@@ -1,5 +1,6 @@
 import { z } from "zod";
 import type { Locale } from "@/lib/i18n/config";
+import type { Json } from "@/lib/supabase/database.types";
 import type { ToolDefinition } from "@/lib/tools/tools-data";
 
 export const GenerateRequestSchema = z.object({
@@ -39,12 +40,54 @@ export function sanitizeInputData(inputData: Record<string, unknown>): Sanitized
   return sanitized;
 }
 
-function getRequiredFieldNames(tool: ToolDefinition) {
-  return tool.fields.filter((field) => field.required).map((field) => field.name);
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-export function validateRequiredFields(tool: ToolDefinition, inputData: SanitizedInputData, locale: Locale) {
-  const missingFields = getRequiredFieldNames(tool).filter((fieldName) => !inputData[fieldName]?.trim());
+function getSchemaFieldNames(inputSchema: Json | null | undefined) {
+  if (!isRecord(inputSchema) || !Array.isArray(inputSchema.fields)) {
+    return null;
+  }
+
+  return inputSchema.fields
+    .map((field) => {
+      if (typeof field === "string") {
+        return { name: field, required: null as boolean | null };
+      }
+
+      if (isRecord(field) && typeof field.name === "string") {
+        return {
+          name: field.name,
+          required: typeof field.required === "boolean" ? field.required : null
+        };
+      }
+
+      return null;
+    })
+    .filter((field): field is { name: string; required: boolean | null } => Boolean(field));
+}
+
+function getRequiredFieldNames(tool: ToolDefinition, inputSchema?: Json | null) {
+  const schemaFields = getSchemaFieldNames(inputSchema);
+
+  if (!schemaFields) {
+    return tool.fields.filter((field) => field.required).map((field) => field.name);
+  }
+
+  return schemaFields
+    .filter((schemaField) => {
+      if (schemaField.required !== null) {
+        return schemaField.required;
+      }
+
+      const localField = tool.fields.find((field) => field.name === schemaField.name);
+      return Boolean(localField?.required);
+    })
+    .map((field) => field.name);
+}
+
+export function validateRequiredFields(tool: ToolDefinition, inputData: SanitizedInputData, locale: Locale, inputSchema?: Json | null) {
+  const missingFields = getRequiredFieldNames(tool, inputSchema).filter((fieldName) => !inputData[fieldName]?.trim());
 
   if (missingFields.length === 0) {
     return null;
@@ -52,7 +95,7 @@ export function validateRequiredFields(tool: ToolDefinition, inputData: Sanitize
 
   const labels = missingFields.map((fieldName) => {
     const field = tool.fields.find((item) => item.name === fieldName);
-    return field?.translations[locale].label ?? fieldName;
+    return field?.translations[locale].label ?? fieldName.replaceAll("_", " ");
   });
 
   return locale === "es"

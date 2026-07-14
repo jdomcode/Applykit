@@ -37,7 +37,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const missingRequiredFieldsError = validateRequiredFields(tool, sanitizedInputData, locale);
+  const missingRequiredFieldsError = validateRequiredFields(tool, sanitizedInputData, locale, template.inputSchema);
 
   if (missingRequiredFieldsError) {
     return NextResponse.json({ error: missingRequiredFieldsError }, { status: 400 });

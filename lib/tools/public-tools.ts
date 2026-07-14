@@ -185,7 +185,7 @@ function mapToolRow(row: ToolListRow, locale: Locale, template?: TemplateVersion
         seoDescription: locale === "en" ? translation?.seo_description ?? description : fallbackTool?.translations.en.seoDescription ?? description,
         formTitle: fallbackTool?.translations.en.formTitle ?? "Tool details",
         resultTitle: fallbackTool?.translations.en.resultTitle ?? "Preview result",
-        sampleOutput: locale === "en" ? template?.template_body ?? fallbackTool?.translations.en.sampleOutput ?? "" : fallbackTool?.translations.en.sampleOutput ?? "",
+        sampleOutput: fallbackTool?.translations.en.sampleOutput ?? "",
         introContent: locale === "en" ? introContent : fallbackTool?.translations.en.introContent,
         faq: locale === "en" ? faq : fallbackTool?.translations.en.faq
       },
@@ -197,7 +197,7 @@ function mapToolRow(row: ToolListRow, locale: Locale, template?: TemplateVersion
         seoDescription: locale === "es" ? translation?.seo_description ?? description : fallbackTool?.translations.es.seoDescription ?? description,
         formTitle: fallbackTool?.translations.es.formTitle ?? "Detalles de la herramienta",
         resultTitle: fallbackTool?.translations.es.resultTitle ?? "Vista previa del resultado",
-        sampleOutput: locale === "es" ? template?.template_body ?? fallbackTool?.translations.es.sampleOutput ?? "" : fallbackTool?.translations.es.sampleOutput ?? "",
+        sampleOutput: fallbackTool?.translations.es.sampleOutput ?? "",
         introContent: locale === "es" ? introContent : fallbackTool?.translations.es.introContent,
         faq: locale === "es" ? faq : fallbackTool?.translations.es.faq
       }
