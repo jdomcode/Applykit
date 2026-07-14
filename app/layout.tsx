@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getSiteUrl, siteName } from "@/lib/seo/metadata";
+import { AdsenseScript } from "@/components/ads/adsense-script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,7 +27,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body>{children}</body>
+      <body>
+        <AdsenseScript />
+        {children}
+      </body>
     </html>
   );
 }

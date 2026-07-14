@@ -32,7 +32,8 @@ The app includes:
   - Copy actions.
   - Save actions.
 - Basic admin analytics panel at `/:locale/admin/analytics`.
-- Reserved non-intrusive ad slots for future monetization.
+- Conservative Google AdSense integration for production monetization.
+- Public `ads.txt` file for AdSense verification.
 - Production-readiness additions:
   - Privacy page.
   - Terms page.
@@ -82,14 +83,22 @@ Create `.env.local`:
 NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-or-publishable-key
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_SHOW_AD_PLACEHOLDERS=true
+NEXT_PUBLIC_SHOW_AD_PLACEHOLDERS=false
+NEXT_PUBLIC_ENABLE_ADS=false
+NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-2860965210851539
+NEXT_PUBLIC_ADSENSE_TOOL_RESULT_SLOT=5544517438
+NEXT_PUBLIC_ADSENSE_CONTENT_FAQ_SLOT=2100096449
 ```
 
 For production, set `NEXT_PUBLIC_SITE_URL` to the final domain, for example:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://applykit.io
+NEXT_PUBLIC_SITE_URL=https://applykit.online
 NEXT_PUBLIC_SHOW_AD_PLACEHOLDERS=false
+NEXT_PUBLIC_ENABLE_ADS=true
+NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-2860965210851539
+NEXT_PUBLIC_ADSENSE_TOOL_RESULT_SLOT=5544517438
+NEXT_PUBLIC_ADSENSE_CONTENT_FAQ_SLOT=2100096449
 ```
 
 Do not expose the Supabase service role key in the frontend.
@@ -113,6 +122,7 @@ http://localhost:3000/en/terms
 http://localhost:3000/es/terminos
 http://localhost:3000/sitemap.xml
 http://localhost:3000/robots.txt
+http://localhost:3000/ads.txt
 http://localhost:3000/manifest.webmanifest
 ```
 
@@ -233,11 +243,13 @@ Functional checks:
 - Legal pages load in English and Spanish.
 - `sitemap.xml`, `robots.txt`, and `manifest.webmanifest` load.
 - Admin analytics remains restricted to admin users.
-- Ad placeholders remain non-intrusive or can be disabled with `NEXT_PUBLIC_SHOW_AD_PLACEHOLDERS=false`.
+- AdSense is enabled only when `NEXT_PUBLIC_ENABLE_ADS=true`.
+- AdSense slots are limited to tool pages and are not placed near Generate, Copy, or Save buttons.
+- `ads.txt` loads from `/ads.txt`.
 
 ## Notes before public launch
 
-Replace the placeholder contact/legal text before publishing publicly.
+Confirm the contact email works before publishing publicly. Keep AdSense disabled until the domain is approved or ready for review in AdSense.
 
 Keep payment, AI, PDF/DOCX export, and real ad network scripts outside the MVP until they are intentionally scoped and reviewed.
 
