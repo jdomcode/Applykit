@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getSiteUrl, siteName } from "@/lib/seo/metadata";
 import { AdsenseScript } from "@/components/ads/adsense-script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <AdsenseScript />
         {children}
+        <Analytics />
       </body>
     </html>
   );
