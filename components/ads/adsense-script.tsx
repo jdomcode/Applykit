@@ -1,17 +1,8 @@
 import Script from "next/script";
-
-function getAdsenseClient() {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim();
-
-  if (!client || !client.startsWith("ca-pub-")) {
-    return null;
-  }
-
-  return client;
-}
+import { getAdsenseClient, isAdsenseEnabled } from "@/lib/site/adsense";
 
 export function AdsenseScript() {
-  const adsEnabled = process.env.NEXT_PUBLIC_ENABLE_ADS === "true";
+  const adsEnabled = isAdsenseEnabled();
   const client = getAdsenseClient();
 
   if (!adsEnabled || !client) {

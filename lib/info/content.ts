@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
+import { siteConfig } from "@/lib/site/config";
 
 export type InfoPageKind = "about" | "contact";
 
@@ -108,7 +109,7 @@ export const infoContent: Record<InfoPageKind, Record<Locale, InfoPageContent>> 
         {
           heading: "Support email",
           body: [
-            "Contact: dovarynlabs@gmail.com",
+            `Contact: ${siteConfig.contactEmail}`,
             "For privacy, product, or content requests, describe the issue clearly. Do not send government ID numbers, financial information, medical information, or other unnecessary sensitive data."
           ]
         },
@@ -123,13 +124,13 @@ export const infoContent: Record<InfoPageKind, Record<Locale, InfoPageContent>> 
           heading: "Business and advertising",
           body: [
             "For business, partnership, or advertising-related inquiries, use the same contact email and include a clear subject line.",
-            "ApplyKit does not sell user conversations, generated content to advertisers."
+            "ApplyKit does not sell user conversations or generated content to advertisers."
           ]
         }
       ],
       primaryAction: {
         label: "Email ApplyKit",
-        href: "mailto:dovarynlabs@gmail.com"
+        href: `mailto:${siteConfig.contactEmail}`
       },
       secondaryAction: {
         label: "Privacy Policy",
@@ -145,7 +146,7 @@ export const infoContent: Record<InfoPageKind, Record<Locale, InfoPageContent>> 
         {
           heading: "Correo de soporte",
           body: [
-            "Contacto: dovarynlabs@gmail.com",
+            `Contacto: ${siteConfig.contactEmail}`,
             "Para solicitudes de privacidad, producto o contenido, describe el caso con claridad. No envíes números de identidad, información financiera, información médica u otros datos sensibles innecesarios."
           ]
         },
@@ -166,7 +167,7 @@ export const infoContent: Record<InfoPageKind, Record<Locale, InfoPageContent>> 
       ],
       primaryAction: {
         label: "Enviar correo",
-        href: "mailto:dovarynlabs@gmail.com"
+        href: `mailto:${siteConfig.contactEmail}`
       },
       secondaryAction: {
         label: "Política de privacidad",

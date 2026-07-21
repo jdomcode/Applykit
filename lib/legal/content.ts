@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
+import { siteConfig } from "@/lib/site/config";
 
 export type LegalPageKind = "privacy" | "terms";
 
@@ -25,7 +26,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
           heading: "No account required",
           body: [
             "ApplyKit can be used without creating an account, signing in, or saving a profile.",
-            "The tools generate text from the information you enter into the form. The current static version does not provide document accounts, dashboards, saved history, or user profiles."
+            "The tools generate text from the information you enter into the form. The current static version does not provide accounts, private user areas, saved history, or user profiles."
           ]
         },
         {
@@ -67,7 +68,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
         {
           heading: "Contact",
           body: [
-            "For privacy or product questions, contact ApplyKit at dovarynlabs@gmail.com.",
+            `For privacy or product questions, contact ApplyKit at ${siteConfig.contactEmail}.`,
             "Do not send unnecessary sensitive information when contacting support."
           ]
         }
@@ -124,7 +125,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
         {
           heading: "Contacto",
           body: [
-            "Para preguntas de privacidad o producto, contacta a ApplyKit en dovarynlabs@gmail.com.",
+            `Para preguntas de privacidad o producto, contacta a ApplyKit en ${siteConfig.contactEmail}.`,
             "No envíes información sensible innecesaria al contactar soporte."
           ]
         }
@@ -161,7 +162,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
         {
           heading: "No accounts or saved documents",
           body: [
-            "The static version of ApplyKit does not provide accounts, saved document history, dashboards, or user profiles.",
+            "The static version of ApplyKit does not provide accounts, saved document history, private user areas, or user profiles.",
             "Users should copy any generated text they want to keep before leaving the page."
           ]
         },
@@ -175,7 +176,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
         {
           heading: "Contact",
           body: [
-            "For questions about these terms, contact ApplyKit at dovarynlabs@gmail.com."
+            `For questions about these terms, contact ApplyKit at ${siteConfig.contactEmail}.`
           ]
         }
       ]
@@ -209,7 +210,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
         {
           heading: "Sin cuentas ni documentos guardados",
           body: [
-            "La versión estática de ApplyKit no ofrece cuentas, historial de documentos guardados, panel ni perfiles de usuario.",
+            "La versión estática de ApplyKit no ofrece cuentas, historial de documentos guardados, áreas privadas ni perfiles de usuario.",
             "Los usuarios deben copiar cualquier texto generado que deseen conservar antes de salir de la página."
           ]
         },
@@ -223,7 +224,7 @@ export const legalContent: Record<LegalPageKind, Record<Locale, LegalPageContent
         {
           heading: "Contacto",
           body: [
-            "Para preguntas sobre estos términos, contacta a ApplyKit en dovarynlabs@gmail.com."
+            `Para preguntas sobre estos términos, contacta a ApplyKit en ${siteConfig.contactEmail}.`
           ]
         }
       ]

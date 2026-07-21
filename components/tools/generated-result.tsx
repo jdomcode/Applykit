@@ -35,10 +35,10 @@ export function GeneratedResult({
   }
 
   return (
-    <section className="min-w-0 rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-6 xl:sticky xl:top-24">
+    <section className="brand-panel min-w-0 rounded-[2rem] p-5 sm:p-6 xl:sticky xl:top-24">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-accent-strong)]">
             {status === "success" ? (locale === "es" ? "Resultado generado" : "Generated result") : locale === "es" ? "Resultado" : "Result"}
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">{title}</h2>
@@ -57,7 +57,7 @@ export function GeneratedResult({
       ) : null}
 
       <textarea
-        className="mt-6 min-h-[28rem] w-full min-w-0 resize-y rounded-2xl border border-slate-200 bg-slate-50 p-5 font-sans text-sm leading-7 text-slate-700 outline-none transition focus:border-slate-700 focus:ring-4 focus:ring-slate-200"
+        className="mt-6 min-h-[28rem] w-full min-w-0 resize-y rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-subtle)] p-5 font-sans text-sm leading-7 text-slate-700 outline-none transition focus:border-[color:var(--brand-accent)] focus:ring-4 focus:ring-[color:var(--brand-accent-soft)]"
         value={status === "loading" ? (locale === "es" ? "Generando documento..." : "Generating document...") : outputText}
         onChange={(event) => onChange(event.target.value)}
         readOnly={status === "loading"}

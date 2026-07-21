@@ -4,9 +4,9 @@ import type { Locale } from "@/lib/i18n/config";
 
 export function LegalPage({ content, locale }: Readonly<{ content: LegalPageContent; locale: Locale }>) {
   return (
-    <section className="bg-slate-50 py-14 sm:py-20">
+    <section className="py-14 sm:py-20">
       <Container>
-        <div className="mx-auto max-w-3xl rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+        <div className="brand-card mx-auto max-w-3xl rounded-3xl p-6 sm:p-10">
           <p className="text-sm font-medium text-slate-500">
             {locale === "es" ? "Última actualización" : "Last updated"}: {content.lastUpdated}
           </p>

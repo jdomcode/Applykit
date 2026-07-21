@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/i18n/config";
 import { AdsenseAd } from "@/components/ads/adsense-ad";
+import { getAdsenseClient, getAdsenseSlot, isAdsenseEnabled, shouldShowAdPlaceholders } from "@/lib/site/adsense";
 
 type AdPlacement =
   | "home_before_tools"
@@ -45,20 +46,10 @@ const realAdSlotByPlacement: Partial<Record<AdPlacement, string | undefined>> = 
   tool_before_faq: process.env.NEXT_PUBLIC_ADSENSE_CONTENT_FAQ_SLOT
 };
 
-function getAdsenseClient() {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim();
-
-  if (!client || !client.startsWith("ca-pub-")) {
-    return null;
-  }
-
-  return client;
-}
-
 export function AdSlot({ locale, placement, label, className = "", variant = "horizontal" }: AdSlotProps) {
-  const adsEnabled = process.env.NEXT_PUBLIC_ENABLE_ADS === "true";
+  const adsEnabled = isAdsenseEnabled();
   const client = getAdsenseClient();
-  const adSlot = realAdSlotByPlacement[placement]?.trim();
+  const adSlot = getAdsenseSlot(realAdSlotByPlacement[placement]);
 
   if (adsEnabled) {
     if (!client || !adSlot) {
@@ -79,7 +70,7 @@ export function AdSlot({ locale, placement, label, className = "", variant = "ho
     );
   }
 
-  const showPlaceholder = process.env.NEXT_PUBLIC_SHOW_AD_PLACEHOLDERS === "true";
+  const showPlaceholder = shouldShowAdPlaceholders();
 
   if (!showPlaceholder) {
     return null;

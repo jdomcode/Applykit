@@ -135,3 +135,19 @@ out/ads.txt
 out/manifest.webmanifest
 out/icon.svg
 ```
+
+## AdSense during static migration
+
+Visible ads remain disabled during the Cloudflare migration. The canonical switch is:
+
+```env
+NEXT_PUBLIC_ADSENSE_ENABLED=false
+```
+
+`public/ads.txt` is preserved with the confirmed publisher line and is copied to `out/ads.txt` during build. Validate it with:
+
+```bash
+npm.cmd run validate:adsense
+```
+
+Do not enable visible ads or add new ad placements until the static production deployment is approved.

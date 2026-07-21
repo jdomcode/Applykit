@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "The requested ApplyKit page is not available.",
+  robots: { index: false, follow: false }
+};
 
 export default function NotFound() {
   return (

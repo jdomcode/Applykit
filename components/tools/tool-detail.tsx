@@ -97,24 +97,24 @@ export async function ToolDetail({ tool, locale }: Readonly<{ tool: ToolDefiniti
         </Link>
       </div>
 
-      <section className="grid min-w-0 gap-8 rounded-[2rem] border border-slate-200 bg-white/80 p-6 shadow-sm sm:p-8 lg:grid-cols-[1fr_0.8fr] lg:items-start">
+      <section className="brand-card grid min-w-0 gap-8 rounded-[2rem] p-6 sm:p-8 lg:grid-cols-[1fr_0.8fr] lg:items-start">
         <div>
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-white">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[color:var(--brand-border-strong)] bg-[linear-gradient(135deg,var(--brand-hero-from),var(--brand-hero-to))] text-sm font-semibold text-white">
             {tool.icon}
           </div>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">ApplyKit</p>
-          <h1 className="mt-3 text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">{copy.title}</h1>
+          <p className="mt-6 section-kicker">ApplyKit</p>
+          <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">{copy.title}</h1>
           <p className="mt-5 text-lg leading-8 text-slate-600">{copy.description}</p>
           {copy.introContent ? <p className="mt-4 text-base leading-7 text-slate-600">{copy.introContent}</p> : null}
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
+        <div className="rounded-3xl border border-[color:var(--border)] bg-white/86 p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-slate-950">{locale === "es" ? "Qué incluye" : "What it includes"}</h2>
           <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-600">
             <li>{locale === "es" ? "Formulario simple, sin experiencia tipo chatbot." : "Simple form, no chatbot-style experience."}</li>
             <li>{locale === "es" ? "Resultado editable y listo para copiar." : "Editable result ready to copy."}</li>
             <li>{locale === "es" ? "Texto profesional basado en tu información." : "Professional text based on your information."}</li>
-                      </ul>
+          </ul>
         </div>
       </section>
 

@@ -24,7 +24,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     <div className="flex min-h-screen flex-col">
       <HtmlLangSync locale={locale as Locale} />
       <Header locale={locale as Locale} />
-      <main className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1">
+        {children}
+      </main>
       <Footer locale={locale as Locale} />
     </div>
   );

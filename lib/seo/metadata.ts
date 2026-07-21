@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import type { Locale } from "@/lib/i18n/config";
 import { getHomePath, getToolsPath } from "@/lib/i18n/navigation";
 import { getToolPath } from "@/lib/tools/tools-data";
+import { siteConfig } from "@/lib/site/config";
 
-export const siteName = "ApplyKit";
+export const siteName = siteConfig.name;
 
 export function getSiteUrl() {
   const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL;
-  return (configuredUrl ?? "http://localhost:3000").replace(/\/$/, "");
+  return (configuredUrl ?? siteConfig.url).replace(/\/$/, "");
 }
 
 export function absoluteUrl(path = "/") {
@@ -18,7 +19,8 @@ export function absoluteUrl(path = "/") {
 export function getAlternateLanguages(pathByLocale: Record<Locale, string>) {
   return {
     en: absoluteUrl(pathByLocale.en),
-    es: absoluteUrl(pathByLocale.es)
+    es: absoluteUrl(pathByLocale.es),
+    "x-default": absoluteUrl(pathByLocale.en)
   };
 }
 

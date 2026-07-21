@@ -9,7 +9,10 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run build",
     "lint": "npm run typecheck",
-    "test": "tsx scripts/template-regression.test.ts"
+    "test": "tsx scripts/template-regression.test.ts",
+    "validate:seo": "tsx scripts/seo-static.test.ts",
+    "validate:adsense": "tsx scripts/adsense-static.test.ts",
+    "validate:phase7": "tsx scripts/static-quality.test.ts"
   },
   "dependencies": {
     "next": "16.2.10",

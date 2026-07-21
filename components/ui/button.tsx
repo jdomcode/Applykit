@@ -4,14 +4,16 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-slate-950 text-white shadow-sm shadow-slate-950/10 hover:bg-slate-800",
-  secondary: "border border-slate-300 bg-white text-slate-950 hover:border-slate-400 hover:bg-slate-50",
-  ghost: "bg-transparent text-slate-700 hover:bg-slate-100 hover:text-slate-950",
-  danger: "bg-red-50 text-red-700 hover:bg-red-100"
+  primary:
+    "border border-[color:var(--brand-accent-strong)] bg-[linear-gradient(135deg,var(--brand-hero-from),var(--brand-hero-to))] text-white shadow-[0_14px_30px_rgba(37,99,235,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(37,99,235,0.28)]",
+  secondary:
+    "border border-[color:var(--border-strong)] bg-white text-slate-950 hover:border-[color:var(--brand-border-strong)] hover:bg-[color:var(--brand-soft)]",
+  ghost: "bg-transparent text-slate-700 hover:bg-[color:var(--brand-soft)] hover:text-slate-950",
+  danger: "border border-red-200 bg-red-50 text-red-700 hover:bg-red-100"
 };
 
 const baseClasses =
-  "inline-flex min-h-11 items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-55 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2";
+  "inline-flex min-h-11 items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-55 focus:outline-none focus:ring-2 focus:ring-[color:var(--ring)] focus:ring-offset-2";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;

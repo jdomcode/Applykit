@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: [
+          "/",
           "/en",
           "/es",
           "/en/tools",
@@ -20,6 +21,20 @@ export default function robots(): MetadataRoute.Robots {
           "/es/privacidad",
           "/en/terms",
           "/es/terminos"
+        ],
+        disallow: [
+          "/api/",
+          "/auth/",
+          "/en/dashboard",
+          "/es/dashboard",
+          "/es/panel",
+          "/en/documents",
+          "/es/documentos",
+          "/en/profile",
+          "/es/profile",
+          "/en/admin",
+          "/es/admin",
+          "/*.pages.dev"
         ]
       }
     ],

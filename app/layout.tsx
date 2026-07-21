@@ -32,6 +32,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <script dangerouslySetInnerHTML={{ __html: getLangBootstrapScript() }} />
         <AdsenseScript />
         {children}

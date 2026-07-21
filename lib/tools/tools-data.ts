@@ -156,7 +156,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Create a professional cover letter in English or Spanish using a simple form.",
         formTitle: "Cover letter details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your cover letter."
+        sampleOutput: "Complete the form to create your cover letter.",
+        introContent: "Use this tool when you need a focused cover letter for a specific job. It combines your role target, company, skills, experience level, tone, and preferred length into an editable draft you can review before sending.",
+        faq: [{ question: "Can I use this cover letter for any job?", answer: "Yes, but you should adapt the generated text to the specific job description before sending it." }, { question: "Does ApplyKit save my cover letter?", answer: "No. The static version generates the text locally in your browser and does not store your document." }]
       },
       es: {
         title: "Generador de carta de presentación",
@@ -166,7 +168,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Crea una carta de presentación profesional en español o inglés usando un formulario simple.",
         formTitle: "Detalles de la carta",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu carta de presentación."
+        sampleOutput: "Completa el formulario para crear tu carta de presentación.",
+        introContent: "Usa esta herramienta cuando necesites una carta de presentación enfocada en una vacante específica. Combina el puesto, la empresa, tus habilidades, nivel de experiencia, tono y longitud deseada en un borrador editable que puedes revisar antes de enviarlo.",
+        faq: [{ question: "¿Puedo usar esta carta para cualquier empleo?", answer: "Sí, pero conviene adaptar el texto generado a la descripción específica de la vacante antes de enviarlo." }, { question: "¿ApplyKit guarda mi carta de presentación?", answer: "No. La versión estática genera el texto localmente en tu navegador y no almacena el documento." }]
       }
     },
     fields: [
@@ -217,7 +221,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Generate a professional email to send your resume or CV in English or Spanish.",
         formTitle: "Application email details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your job application email."
+        sampleOutput: "Complete the form to create your job application email.",
+        introContent: "Use this generator to prepare a short email for sending your resume or CV. The result is designed to be clear, professional, and easy to adjust for recruiters or hiring teams.",
+        faq: [{ question: "Can I mention an attachment?", answer: "Yes. Use the attachment note field when you want to mention that your resume, CV, or portfolio is attached." }, { question: "Is this a replacement for reviewing my email?", answer: "No. Review and edit the generated text before sending it to an employer or recruiter." }]
       },
       es: {
         title: "Generador de correo para enviar CV",
@@ -227,7 +233,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Genera un correo profesional para enviar tu CV en español o inglés.",
         formTitle: "Detalles del correo",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu correo de postulación."
+        sampleOutput: "Completa el formulario para crear tu correo de postulación.",
+        introContent: "Usa este generador para preparar un correo breve al enviar tu CV. El resultado está diseñado para ser claro, profesional y fácil de ajustar para reclutadores o equipos de contratación.",
+        faq: [{ question: "¿Puedo mencionar un adjunto?", answer: "Sí. Usa el campo de nota del adjunto si quieres indicar que tu CV, portafolio u otro documento está incluido." }, { question: "¿Esto reemplaza revisar el correo antes de enviarlo?", answer: "No. Revisa y edita el texto generado antes de enviarlo a una empresa o reclutador." }]
       }
     },
     fields: [
@@ -259,7 +267,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Write a polite follow-up email after a job interview in English or Spanish.",
         formTitle: "Follow-up details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your follow-up email."
+        sampleOutput: "Complete the form to create your follow-up email.",
+        introContent: "Use this tool after an interview when you want to follow up politely without sounding pushy. It creates an editable message using the role, company, interview date, and tone you select.",
+        faq: [{ question: "When should I send a follow-up email?", answer: "Many candidates send a brief follow-up after an interview or after the timeline shared by the hiring team has passed." }, { question: "Can I leave the interviewer name empty?", answer: "Yes. If you do not know the interviewer name, the template still produces a general professional message." }]
       },
       es: {
         title: "Generador de correo de seguimiento",
@@ -269,7 +279,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Escribe un correo amable de seguimiento después de una entrevista laboral en español o inglés.",
         formTitle: "Detalles del seguimiento",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu correo de seguimiento."
+        sampleOutput: "Completa el formulario para crear tu correo de seguimiento.",
+        introContent: "Usa esta herramienta después de una entrevista cuando quieras dar seguimiento de forma profesional sin sonar insistente. Crea un mensaje editable usando el puesto, la empresa, la fecha y el tono que selecciones.",
+        faq: [{ question: "¿Cuándo conviene enviar un correo de seguimiento?", answer: "Muchos candidatos envían un seguimiento breve después de la entrevista o cuando ya pasó el plazo indicado por el equipo de contratación." }, { question: "¿Puedo dejar vacío el nombre del entrevistador?", answer: "Sí. Si no sabes el nombre, la plantilla genera un mensaje profesional general." }]
       }
     },
     fields: [
@@ -295,7 +307,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Create a professional recruiter message for LinkedIn or email.",
         formTitle: "Recruiter message details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your recruiter message."
+        sampleOutput: "Complete the form to create your recruiter message.",
+        introContent: "Use this tool to write a concise message for a recruiter on LinkedIn, email, Indeed, or another platform. The result uses your experience, skills, target role, and channel.",
+        faq: [{ question: "Can I use this on LinkedIn?", answer: "Yes. Select LinkedIn as the platform and adapt the result to the conversation before sending it." }, { question: "Does the message invent experience?", answer: "No. It only uses the experience, skills, role, and platform details you provide." }]
       },
       es: {
         title: "Generador de mensaje para reclutador",
@@ -305,7 +319,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Crea un mensaje profesional para contactar reclutadores por LinkedIn o correo.",
         formTitle: "Detalles del mensaje",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu mensaje al reclutador."
+        sampleOutput: "Completa el formulario para crear tu mensaje al reclutador.",
+        introContent: "Usa esta herramienta para redactar un mensaje breve para un reclutador en LinkedIn, correo, Indeed u otra plataforma. El resultado usa tu experiencia, habilidades, rol objetivo y canal.",
+        faq: [{ question: "¿Puedo usarlo en LinkedIn?", answer: "Sí. Selecciona LinkedIn como plataforma y ajusta el resultado al contexto de la conversación antes de enviarlo." }, { question: "¿El mensaje inventa experiencia?", answer: "No. Solo usa la experiencia, habilidades, rol y plataforma que tú indicas." }]
       }
     },
     fields: [
@@ -331,7 +347,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Generate a professional resignation letter in English or Spanish.",
         formTitle: "Resignation details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your resignation letter."
+        sampleOutput: "Complete the form to create your resignation letter.",
+        introContent: "Use this tool to prepare a respectful resignation letter with your role, company, last working day, and an optional reason. The result is editable so you can keep the tone appropriate for your situation.",
+        faq: [{ question: "Do I need to include a reason?", answer: "No. The reason field is optional, and the letter still works without it." }, { question: "Is this legal advice?", answer: "No. ApplyKit provides general writing support. Review your employment agreement or local requirements if needed." }]
       },
       es: {
         title: "Generador de carta de renuncia",
@@ -341,7 +359,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Genera una carta de renuncia profesional en español o inglés.",
         formTitle: "Detalles de la renuncia",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu carta de renuncia."
+        sampleOutput: "Completa el formulario para crear tu carta de renuncia.",
+        introContent: "Usa esta herramienta para preparar una carta de renuncia respetuosa con tu puesto, empresa, último día laboral y una razón opcional. El resultado es editable para que ajustes el tono según tu situación.",
+        faq: [{ question: "¿Tengo que incluir una razón?", answer: "No. El campo de razón es opcional y la carta funciona aunque lo dejes vacío." }, { question: "¿Esto es asesoría legal?", answer: "No. ApplyKit ofrece apoyo general de redacción. Revisa tu contrato o requisitos locales si lo necesitas." }]
       }
     },
     fields: [
@@ -367,7 +387,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Generate a professional salary negotiation email in English or Spanish.",
         formTitle: "Negotiation details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your salary negotiation email."
+        sampleOutput: "Complete the form to create your salary negotiation email.",
+        introContent: "Use this tool to draft a professional salary negotiation email. It includes the role, company, current offer when provided, your target range, and your reasoning.",
+        faq: [{ question: "Does this guarantee a higher salary?", answer: "No. The tool only helps you write a professional message. Salary decisions depend on the employer and context." }, { question: "Should I include a target range?", answer: "Yes. The target range helps make the request clear and specific." }]
       },
       es: {
         title: "Generador de email para negociar salario",
@@ -377,7 +399,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Genera un email profesional para negociar salario en español o inglés.",
         formTitle: "Detalles de negociación",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu email de negociación salarial."
+        sampleOutput: "Completa el formulario para crear tu email de negociación salarial.",
+        introContent: "Usa esta herramienta para redactar un email profesional de negociación salarial. Incluye el puesto, empresa, oferta actual si la indicas, rango deseado y argumento.",
+        faq: [{ question: "¿Esto garantiza un salario más alto?", answer: "No. La herramienta solo ayuda a redactar un mensaje profesional. La decisión depende de la empresa y del contexto." }, { question: "¿Debo incluir un rango deseado?", answer: "Sí. El rango deseado ayuda a que la solicitud sea clara y específica." }]
       }
     },
     fields: [
@@ -404,7 +428,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Generate a professional LinkedIn bio in English or Spanish.",
         formTitle: "LinkedIn bio details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your LinkedIn bio."
+        sampleOutput: "Complete the form to create your LinkedIn bio.",
+        introContent: "Use this generator to create a clearer LinkedIn About section. It combines your role, industry, skills, and career goal into a professional summary you can adapt to your profile.",
+        faq: [{ question: "Can I paste this directly into LinkedIn?", answer: "Yes, but review it first so it matches your real experience and voice." }, { question: "Does ApplyKit optimize my LinkedIn profile automatically?", answer: "No. It generates editable text; you still decide what to publish." }]
       },
       es: {
         title: "Generador de bio para LinkedIn",
@@ -414,7 +440,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Genera una bio profesional para LinkedIn en español o inglés.",
         formTitle: "Detalles de la bio",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu bio de LinkedIn."
+        sampleOutput: "Completa el formulario para crear tu bio de LinkedIn.",
+        introContent: "Usa este generador para crear una sección Acerca de más clara para LinkedIn. Combina tu rol, industria, habilidades y objetivo profesional en un resumen que puedes adaptar a tu perfil.",
+        faq: [{ question: "¿Puedo pegarlo directamente en LinkedIn?", answer: "Sí, pero revísalo primero para que coincida con tu experiencia real y tu forma de comunicarte." }, { question: "¿ApplyKit optimiza mi perfil de LinkedIn automáticamente?", answer: "No. Genera texto editable; tú decides qué publicar." }]
       }
     },
     fields: [
@@ -440,7 +468,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Create a professional bio for resumes, portfolios, and websites in English or Spanish.",
         formTitle: "Professional bio details",
         resultTitle: "Your result",
-        sampleOutput: "Complete the form to create your professional bio."
+        sampleOutput: "Complete the form to create your professional bio.",
+        introContent: "Use this tool to write a short professional bio for a resume, portfolio, company profile, or personal website. It focuses on your role, experience, skills, and work style.",
+        faq: [{ question: "Where can I use this bio?", answer: "You can adapt it for resumes, portfolios, websites, proposals, or professional profiles." }, { question: "Can I edit the result?", answer: "Yes. The generated bio appears in an editable field before you copy it." }]
       },
       es: {
         title: "Generador de bio profesional",
@@ -450,7 +480,9 @@ export const tools: ToolDefinition[] = [
         seoDescription: "Crea una bio profesional para CV, portafolios y sitios web en español o inglés.",
         formTitle: "Detalles de la bio profesional",
         resultTitle: "Tu resultado",
-        sampleOutput: "Completa el formulario para crear tu bio profesional."
+        sampleOutput: "Completa el formulario para crear tu bio profesional.",
+        introContent: "Usa esta herramienta para escribir una bio profesional breve para CV, portafolios, perfiles de empresa o sitios personales. Se enfoca en tu rol, experiencia, habilidades y forma de trabajo.",
+        faq: [{ question: "¿Dónde puedo usar esta bio?", answer: "Puedes adaptarla para CV, portafolios, sitios web, propuestas o perfiles profesionales." }, { question: "¿Puedo editar el resultado?", answer: "Sí. La bio generada aparece en un campo editable antes de copiarla." }]
       }
     },
     fields: [
