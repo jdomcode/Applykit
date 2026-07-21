@@ -1,19 +1,17 @@
-# ApplyKit static migration
+# ApplyKit static migration — complete
 
-ApplyKit is being converted into a fully public, anonymous static site.
+ApplyKit is a fully public, anonymous static site.
 
-Current direction:
+Current state:
 
-- No login.
-- No registration.
+- No login or registration.
 - No sessions.
 - No dashboard.
 - No saved document history.
 - No admin panel.
 - Local document generation in the browser.
 - Eight bilingual tools preserved.
-- Static hosting preparation for Cloudflare Pages.
-
-Phase 3 removed account-related UI, private routes, backend document APIs, analytics backend code, and the previous account backend dependencies.
-
-Phase 4 will configure static export and generate the `out/` directory.
+- Next.js static export enabled.
+- Cloudflare Pages output is `out/`.
+- SEO, trust pages, AdSense preparation, visual identity, accessibility, and security headers are in place.
+- Phase 8 final QA and release cleanup completed.

@@ -161,7 +161,7 @@ export const infoContent: Record<InfoPageKind, Record<Locale, InfoPageContent>> 
           heading: "Negocios y publicidad",
           body: [
             "Para consultas comerciales, alianzas o temas relacionados con publicidad, usa el mismo correo de contacto e incluye un asunto claro.",
-            "ApplyKit no vende conversaciones, contenido generado de usuarios a anunciantes."
+            "ApplyKit no vende conversaciones ni contenido generado por usuarios a anunciantes."
           ]
         }
       ],

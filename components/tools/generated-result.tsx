@@ -38,7 +38,7 @@ export function GeneratedResult({
     <section className="brand-panel min-w-0 rounded-[2rem] p-5 sm:p-6 xl:sticky xl:top-24">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-accent-strong)]">
+          <p aria-live="polite" className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-accent-strong)]">
             {status === "success" ? (locale === "es" ? "Resultado generado" : "Generated result") : locale === "es" ? "Resultado" : "Result"}
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">{title}</h2>
@@ -51,7 +51,7 @@ export function GeneratedResult({
       </div>
 
       {errorMessage ? (
-        <div className="mt-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-700">
+        <div role="alert" className="mt-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-700">
           {errorMessage}
         </div>
       ) : null}

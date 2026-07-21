@@ -1,35 +1,42 @@
-# ApplyKit project state
+# ApplyKit final static state
 
-Status: static migration in progress.
+Status: production-ready static release candidate after Phase 8 QA.
 
-Current public features:
+## Product
 
-- Bilingual English/Spanish site.
-- Eight job-search document tools.
-- Local template-based generation.
+- Bilingual English/Spanish job-search toolkit.
+- Eight public tools.
+- Local template-based generation in the browser.
 - Editable results.
-- Copy result.
-- Clear/reset form.
-- Public SEO pages.
-- Privacy, terms, about, and contact pages.
-- Sitemap and robots.
-- AdSense preparation with visible ads disabled by default during migration.
+- Copy and clear/reset actions.
+- No accounts, login, sessions, dashboard, profiles, admin, saved documents, or document backend APIs.
 
-Removed by Phase 3:
+## Hosting
 
-- Login and registration.
-- Password recovery.
-- Sessions.
-- Dashboard.
-- Saved documents.
-- Favorites.
-- Profile page.
-- Admin analytics.
-- Backend document APIs.
-- Account-related navigation.
+- Next.js static export with `output: "export"`.
+- Cloudflare Pages build output: `out/`.
+- Canonical production domain: `https://applykit.online`.
 
-Pending:
+## SEO and trust
 
-- Phase 4 static export with `output: "export"`.
-- Cloudflare Pages build output validation.
-- Final static QA.
+- Public canonical routes in English and Spanish.
+- Canonical metadata and hreflang alternates.
+- Sitemap and robots metadata routes.
+- About, contact, privacy, and terms pages in both languages.
+
+## Monetization readiness
+
+- `ads.txt` preserved with the confirmed Google publisher ID.
+- AdSense integration is prepared but visible ads remain disabled by default.
+- Legal pages do not contain ad placements.
+- Before enabling personalized ads for EEA/UK/Switzerland traffic, configure a Google-certified CMP that supports IAB TCF.
+
+## Phase 8 closeout
+
+Final cleanup includes:
+
+- ApplyKit favicon aligned with the blue brand identity.
+- Spanish contact wording corrected.
+- Root language page skip-link target fixed.
+- Result errors exposed with `role="alert"` and result status with a polite live region.
+- Package lock sanitized so it does not reference internal package registries.

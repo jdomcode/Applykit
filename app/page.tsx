@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootPage() {
   return (
-    <main className="min-h-screen px-6 py-16 text-slate-950">
+    <main id="main-content" className="min-h-screen px-6 py-16 text-slate-950">
       <div className="brand-card mx-auto max-w-2xl rounded-[2rem] p-8 sm:p-10">
         <BrandMark caption="English / Español" />
         <h1 className="mt-6 text-4xl font-semibold tracking-tight">Choose your language</h1>

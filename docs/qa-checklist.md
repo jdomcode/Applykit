@@ -1,15 +1,21 @@
-# ApplyKit static QA checklist
+# ApplyKit Phase 8 final QA checklist
 
-Run before approving the static version:
+Run before each production release:
 
-- `npm ci`
-- `npm run lint`
-- `npm run typecheck`
-- `npm test`
-- `npm run build`
+```bash
+npm ci
+npm run lint
+npm run typecheck
+npm test
+NEXT_PUBLIC_SITE_URL=https://applykit.online npm run build
+npm run validate:seo
+npm run validate:adsense
+npm run validate:phase7
+```
 
-Public route checks:
+## Public routes
 
+- `/`
 - `/en`
 - `/es`
 - `/en/tools`
@@ -26,9 +32,10 @@ Public route checks:
 - `/es/terminos`
 - `/sitemap.xml`
 - `/robots.txt`
-- `/ads.txt`, if present.
+- `/ads.txt`
+- `/manifest.webmanifest`
 
-Tool checks:
+## Tool regression
 
 - Generate in English.
 - Generate in Spanish.
@@ -37,14 +44,26 @@ Tool checks:
 - Edit result.
 - Copy result.
 - Clear form.
-- No placeholders.
+- No unresolved placeholders.
 - No literal `\\n` output.
 - No `undefined`, `null`, or `[object Object]`.
 - No account, dashboard, save, admin, login, or registration UI.
 
-Network checks:
+## Visual / responsive
 
+- Desktop layout.
+- 375 px mobile layout.
+- Header and mobile menu.
+- Tool grid.
+- Tool form and result panel.
+- About/contact/legal pages.
+- No horizontal overflow.
+- Brand favicon and visual identity consistent.
+
+## Network / privacy
+
+- No Supabase calls.
 - No document POST requests.
 - No session requests.
-- No account backend requests.
 - No private API calls.
+- Visible AdSense disabled unless production monetization is intentionally enabled.

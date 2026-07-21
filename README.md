@@ -104,14 +104,9 @@ npm.cmd run check
 
 `lint` currently runs TypeScript validation. `test` runs the template regression matrix.
 
-## Static migration status
+## Static production status
 
-Phase 2 migrated the final approved templates to local TypeScript code.
-
-Phase 3 removes authentication, saved documents, private routes, admin analytics, backend document APIs, and account-related UI.
-
-Phase 4 will configure Next.js static export for Cloudflare Pages.
-
+ApplyKit is now configured as a fully static, anonymous application for Cloudflare Pages. The account/backend migration, local templates, static export, SEO/trust work, AdSense preparation, visual identity, accessibility, security headers, and final Phase 8 QA are complete.
 
 ## Static export for Cloudflare Pages
 
@@ -138,7 +133,7 @@ out/icon.svg
 
 ## AdSense during static migration
 
-Visible ads remain disabled during the Cloudflare migration. The canonical switch is:
+Visible ads remain disabled by default until production monetization is intentionally enabled. The canonical switch is:
 
 ```env
 NEXT_PUBLIC_ADSENSE_ENABLED=false
